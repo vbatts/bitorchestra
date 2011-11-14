@@ -1,0 +1,4 @@
+to play these, just compile and run like:
+
+$> ./f1 | aplay
+
