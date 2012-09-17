@@ -1,1 +1,7 @@
-main(t){for(t=0;;t++)putchar(t*(((t>>12)|(t>>8))&(63&(t>>4))));}
+#include "audio.h"
+int main(t){
+	init();
+	for(t=0;;t++) {
+		p(t*(((t>>12)|(t>>8))&(63&(t>>4))));
+	}
+}

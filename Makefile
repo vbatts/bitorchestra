@@ -1,11 +1,14 @@
 
-FILES := $(basename $(wildcard *.c))
+MUSIC_FILES := $(basename $(wildcard f*.c))
+TMP_FILES := $(wildcard *~) $(wildcard *.o)
 
-all: $(FILES)
+all: $(MUSIC_FILES)
 
-%: %.c
-	$(CC) -o $@ $<
+audio.o: audio.c audio.h
+
+%: %.c audio.o
+	$(CC) -static -s -o $@ $^
 
 clean:
-	rm -rf $(FILES) *.o *~
+	rm -rf $(MUSIC_FILES) $(TMP_FILES)
 
