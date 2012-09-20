@@ -1,6 +1,6 @@
 #include "audio.h"
 int main(int t) {
-	init();
+	//init();
 	for (t = 0;;t++) {
 		int i;
 		i = (t>>7-(t>>15)&-t>>7-(t>>15));

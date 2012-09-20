@@ -1,4 +1,11 @@
 to play these, just compile and run like:
 
-$> ./f1 | aplay
+  $> ./f1 > /dev/audio
+or (fancier)
+  $> ./f1 | aplay
+or (fanciest) (this way you can play with the rate)
+  $> ./f1 | play -r 8k -t raw -b 8 -c 1 -e signed -
+or (fanciester)
+  $> ./f1 | sox -r 8k -t raw -b 8 -c 1 -e signed - audio.mp3 # mp3 requires 8khz rate
+  $> play audio.mp3
 

@@ -9,6 +9,7 @@ void init() {
 }
 
 void p(int i) {
-	fputc(i, audio);
+	//fputc(i, audio);
+	putchar(i);
 }
 
