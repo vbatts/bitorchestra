@@ -1,7 +1,5 @@
-#include "audio.h"
-int main(t){
-	//init();
-	for(t=0;;t++) {
-		p(t*(((t>>12)|(t>>8))&(63&(t>>4))));
-	}
+#include "sounds.h"
+int main(){
+  sound_loop_1(sound_2,0);
 }
+// vim:set sw=2 sts=2 et ai:

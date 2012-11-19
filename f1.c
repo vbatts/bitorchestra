@@ -1,10 +1,5 @@
-#include "audio.h"
-
+#include "sounds.h"
 int main() {
-	//init();
-	int t;
-	for (t = 0;;t++) {
-		p((t >> 6 | t | t >> (t >> 16)) * 10 + ((t >> 11) & 7));
-	}
+  sound_loop_1(sound_1,0);
 }
-
+// vim:set sw=2 sts=2 et ai:
