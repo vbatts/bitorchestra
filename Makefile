@@ -1,8 +1,9 @@
 
-MUSIC_FILES := $(basename $(wildcard f*.c))
+MUSIC_FILES := $(basename $(wildcard f*.c)) main
 TMP_FILES := $(wildcard *~) $(wildcard *.o)
-CFLAGS += 
-LDFLAGS += -static -s
+CFLAGS +=
+LDFLAGS += -g
+CC = gcc
 all: $(MUSIC_FILES)
 
 audio.o: audio.c audio.h
