@@ -9,3 +9,8 @@ or (fanciester)
   $> ./f1 | sox -r 8k -t raw -b 8 -c 1 -e signed - audio.mp3 # mp3 requires 8khz rate
   $> play audio.mp3
 
+with some effects!
+  $> ./main -s5 | play -t raw -e signed -b 8  -r 20k -  chorus 0.5 0.9 50 0.4 0.25 2 -t 60 0.32 0.4 2.3 -t 40 0.3 0.3 1.3 -s
+
+or even process some effects, and shove it back to stdout!
+  $> ./main -s3 | sox -t raw -e signed -b 8  -r 2k - -t raw - bend .35,180,.25 .2,199,.1  > /dev/audio 
