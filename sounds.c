@@ -48,4 +48,10 @@ int sound_6(int t) {
   return ((30000000000/(y)&1)*35+(x)*y/400000000+((t>>8^t>>10|1>>14|x)&63));
 }
 
+int sound_7(int t) {
+  int i;
+  i=t<<2*(t^t*2);
+  return (((t&(t>>i)))^(t*("salve munde"[t>>13&7]&15))/12&32);
+}
+
 // vim:set sw=2 sts=2 et ai:

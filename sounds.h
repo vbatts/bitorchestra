@@ -9,6 +9,7 @@ int sound_3(int t);
 int sound_4(int t);
 int sound_5(int t);
 int sound_6(int t);
+int sound_7(int t);
 
 #endif
 

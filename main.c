@@ -7,7 +7,7 @@
 #include "sounds.h"
 
 void usage(char* name, int exit_stat) {
-  fprintf(stderr, "Usage: %s [-f filename] < -s 1-6 >\n", name);
+  fprintf(stderr, "Usage: %s [-f filename] < -s 1-7 >\n", name);
   exit(exit_stat);
 }
 
@@ -37,7 +37,7 @@ int main(int ac, char* av[]) {
   }
 
   if (sound_choice == 0) {
-    fprintf(stderr, "ERROR: pleaese choice a sound (currently 1-6)\n");
+    fprintf(stderr, "ERROR: pleaese choice a sound (currently 1-7)\n");
     usage(av[0], EXIT_FAILURE);
   }
 
@@ -61,6 +61,9 @@ int main(int ac, char* av[]) {
       break;
     case 6:
       sound_loop_1(sound_6, 0);
+      break;
+    case 7:
+      sound_loop_1(sound_7, 0);
       break;
   }
 
